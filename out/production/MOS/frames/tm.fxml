@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseEntered="#setTable" prefHeight="400.0" prefWidth="600.0" stylesheets="@../external/style.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="support.Controller">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="400.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="600.0" />
+      <TableView fx:id="pTable" layoutX="-1.0" layoutY="75.0" onMousePressed="#disableBtn" prefHeight="325.0" prefWidth="607.0" >
+        <columns>
+          <TableColumn fx:id="pidCol" prefWidth="107.0" text="Pid" />
+          <TableColumn fx:id="pnCol" prefWidth="160.0" text="Process Name" />
+            <TableColumn fx:id="ptCol" prefWidth="114.0" text="Process Type" />
+            <TableColumn fx:id="stCol" prefWidth="128.0" text="Status" />
+        </columns>
+      </TableView>
+      <JFXButton fx:id="rpBtn" contentDisplay="CENTER" layoutX="455.0" layoutY="337.0" maxHeight="62.0" onAction="#restartProcess" prefHeight="25.0" prefWidth="60.0" styleClass="secondary"  text="Restart Process" />
+      <JFXButton fx:id="epBtn" layoutX="531.0" layoutY="335.0" onAction="#endProcess" prefHeight="25.0" prefWidth="119.0" styleClass="secondary"  text="End Process" />
+      <JFXButton fx:id="exitpmBtn" layoutX="8.0" layoutY="334.0" onAction="#shutdown" prefHeight="25.0" prefWidth="119.0" styleClass="secondary"  text="EXIT" />
+      <Label layoutX="6.0" layoutY="-11.0" prefHeight="62.0" prefWidth="331.0" styleClass="label-header"  text="Process Manager">
+         <font>
+            <Font name="System Bold" size="29.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

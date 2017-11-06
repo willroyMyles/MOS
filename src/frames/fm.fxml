@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="460.0" prefWidth="360.0" stylesheets="@../external/style.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="support.Controller">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="460.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="360.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#66c1c8" height="360.0" layoutY="100.0" opacity="0.0" stroke="BLACK" strokeType="INSIDE" width="360.0">
+         <effect>
+            <DropShadow color="#00000062" />
+         </effect>
+      </Rectangle>
+      <Label layoutX="6.0" styleClass="label-header" text="File Manager">
+         <font>
+            <Font name="Calibri" size="38.0" />
+         </font>
+         <effect>
+            <DropShadow color="#00000031" />
+         </effect>
+      </Label>
+      <JFXButton fx:id="fmExitBtn" layoutX="286.0" layoutY="386.0" onAction="#shutdown" styleClass="secondary" text="Exit" />
+   </children>
+</AnchorPane>
